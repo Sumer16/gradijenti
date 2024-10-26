@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { StyleSheet, ScrollView, Platform, View, TouchableOpacity } from 'react-native';
 
 import { ThemedText } from '@/components/ThemedText';
-import { Ionicons } from '@expo/vector-icons'
+import { Ionicons } from '@expo/vector-icons';
 
 type GradientDirection =
   | 'topToBottom'
