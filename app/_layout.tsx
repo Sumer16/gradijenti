@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { Platform } from 'react-native'
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -28,8 +29,23 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack
+        screenOptions={{
+          headerShown: true,
+          headerBlurEffect: colorScheme === 'dark' ? 'dark' : 'light',
+          headerLargeTitle: true,
+          headerTransparent: Platform.select({
+            ios: true,
+            web: true,
+            android: false,
+          }),
+          headerTintColor: Platform.select({
+            ios: colorScheme === 'dark' ? 'white' : undefined,
+            web: 'white'
+          })
+        }}
+      >
+        <Stack.Screen name="index" options={{ headerTitle: 'Gradijenti' }} />
         <Stack.Screen name="+not-found" />
       </Stack>
     </ThemeProvider>
