@@ -39,7 +39,7 @@ export default function GradientDetailsScreen() {
 
   return (
     <>
-      <Stack.Screen options={{ title: gradientName }} />
+      <Stack.Screen options={{ title: gradientName, headerBackTitle: 'back' }} />
       <ScrollView contentContainerStyle={styles.container}>
         <LinearGradient
           colors={colors.split(',')}

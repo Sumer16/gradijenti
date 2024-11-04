@@ -1,5 +1,6 @@
 import { ScrollViewStyleReset } from 'expo-router/html';
 import { type PropsWithChildren } from 'react';
+import Head from 'expo-router/head';
 
 /**
  * This file is web-only and used to configure the root HTML for every web page during static rendering.
@@ -23,6 +24,12 @@ export default function Root({ children }: PropsWithChildren) {
         <style dangerouslySetInnerHTML={{ __html: responsiveBackground }} />
         {/* Add any additional <head> elements that you want globally available on web... */}
       </head>
+
+      <Head>
+        <title>Gradijenti</title>
+        <meta name="description" content="This is expo linear gradient color library." />
+      </Head>
+
       <body>{children}</body>
     </html>
   );
