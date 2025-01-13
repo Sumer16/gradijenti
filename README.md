@@ -4,7 +4,7 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 ## About Gradijenti
 
-Gradijenti is a fully functional linear gradient colors gallery app developed using the popular framework React Native & build framework Expo. This app is available to run on Android, iOS, & Web.
+Gradijenti is a fully functional linear gradient colors gallery app developed using the popular framework React Native & build framework Expo. This app is available to run on Android, iOS, & Web (hosted using Vercel).
 
 ## Screenshots
 
